@@ -2,7 +2,7 @@
   <h4><%= recipe.title %></h4>
   <ul>
     <% recipe.ingredients.each do |ingredient| %>
-      <li> <%= ingredient.name %> <%= ingredient.quantity %>
+      <li> <%= ingredient.name %>, <%= ingredient.quantity %>, <%= ingredient.recipe_id %>
     <% end %>
   </ul>
 <% end %>
