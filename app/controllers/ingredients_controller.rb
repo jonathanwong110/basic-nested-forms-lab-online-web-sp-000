@@ -1,24 +1,24 @@
-class RecipesController < ApplicationController
+class IngredientsController < ApplicationController
   def show
-    @recipe = Recipe.find(params[:id])
+    @ingredient = Ingredient.find(params[:id])
   end
 
   def index
-    @recipes = Recipe.all
+    @ingredients = Ingredient.all
   end
 
   def new
-    @recipe = Recipe.new
+    @ingredient = Ingredient.new
   end
 
   def create
-    recipe = Recipe.create(recipe_params)
-    redirect_to recipe_path
+    ingredient = Ingredient.create(ingredient_params)
+    redirect_to ingredient_path
   end
   
   private
   
-  def recipe_params
+  def ingredient_params
   end
   
 end
