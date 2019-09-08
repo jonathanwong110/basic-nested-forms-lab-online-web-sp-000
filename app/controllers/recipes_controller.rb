@@ -1,3 +1,4 @@
+require 'pry'
 class RecipesController < ApplicationController
   def show
     @recipe = Recipe.find(params[:id])
@@ -19,6 +20,7 @@ class RecipesController < ApplicationController
   private
   
   def recipe_params
+    binding.pry
     params.require(:recipe).permit(
       :title,
       ingredients_attributes: [
